@@ -1,12 +1,12 @@
 <template>
     <div style="height:100%">
-        <header>管理后台</header>
+        <header><router-link to="/" style="float:right">回首页</router-link>管理后台</header>
         <main>
             <div class="left">
                 <ul>
                     <router-link to="/admin/list" tag="li">博客列表</router-link>
                     <router-link to="/admin/type" tag="li">博客分类</router-link>
-                    <router-link to="/admin/my" tag="li">我的简介</router-link>
+                    <!-- <router-link to="/admin/my" tag="li">我的简介</router-link> -->
                 </ul>
             </div>
 

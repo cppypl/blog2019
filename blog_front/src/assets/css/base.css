@@ -1,4 +1,11 @@
-*{margin: 0; padding: 0; box-sizing: border-box; transition: 0.5s}
+*{margin: 0; padding: 0; box-sizing: border-box; transition: 0.2s}
 a{color: #333; text-decoration: none}
 a:hover{color: #666;}
 li{list-style: none;}
+.ql-syntax{
+    background-color: #23241f !important;
+    color: #f8f8f2;
+    overflow: visible;
+    padding: 20px;
+    border-radius: 4px;
+}

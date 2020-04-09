@@ -1,6 +1,6 @@
 <template>
   <div>
-    <router-link class="addBlog" to="addType" tag="span">添加博客</router-link>
+    <router-link class="addBlog" to="addType" tag="span">添加分类</router-link>
     <table>
       <thead>
         <tr>
@@ -29,9 +29,8 @@ export default {
  
   methods:{
     async getList(){
-      let result=await fetch(`${this.api.api}admin/api_getType`);
-      let res =await result.json()
-      this.listData=res
+      let result=await this.$axios(`admin/api/getType`);
+      this.listData=result.data.result
       
     }
   },

@@ -1,17 +1,21 @@
-const Router= require('koa-router')
-let router=new Router()
+const router= require('koa-router')()
 
-router.get('/',async ctx=>{
-    console.time('11');
+// router.get('/',async ctx=>{
+//     console.time('11');
     
-    let data=await ctx.db.col('users').find().toArray()
-    console.log(data);
-    
-    console.timeEnd('11');
-    ctx.body="服务端渲染的首页"
+//     let data=await ctx.db.col('list').find().toArray()
+//     console.timeEnd('11');
+//     ctx.body=data
+// })
+
+
+router.get('/login',async ctx=>{
+    await ctx.render('admin/login',{
+        test:123
+    })
 })
 
 
 
-
+router.use('/api/edit',require('./edit'))
 module.exports=router.routes()
